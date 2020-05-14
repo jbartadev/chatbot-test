@@ -1,3 +1,4 @@
+'use strict';
 const BootBot = require('bootbot');
 const config = require('config');
 
@@ -37,13 +38,13 @@ bot.on('postback:SLEEP', async (payload, chat) => {
 });
 
 // Response on greetings as "hello, hi, hey, good morning, good evening" --> say hi greeting back
-bot.hear(['Hello','hello', 'hi', 'Hi', 'Hey', 'hey','Good morning', 'good morning', 'Good evening', 'good evening'], async (payload, chat) => {
+bot.hear(['hello', 'hi', 'hey', 'good morning', 'good evening',], async (payload, chat) => {
     await chat.say(greetingText);
     await tools.showInitialDecision(chat);
 });
 
 // Response on greetings as "goodbye, bye, see you or thank you, thanks..."--> say goodbye back
-bot.hear(['Goodbye', 'goodbye', 'Bye', 'bye', 'See you', 'see you', 'Thank you', 'thank you', 'Thanks', 'thanks', 'Cheers', 'cheers'], async (payload, chat) => {
+bot.hear(['goodbye', 'bye', 'see you', 'thank you', 'thanks', 'cheers'], async (payload, chat) => {
     await tools.goToBed(chat);
 });
 
