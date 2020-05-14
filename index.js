@@ -40,7 +40,10 @@ bot.on('postback:SLEEP', async (payload, chat) => {
 // Response on greetings as "hello, hi, hey, good morning, good evening" --> say hi greeting back
 bot.hear(['hello', 'hi', 'hey', 'good morning', 'good evening',], async (payload, chat) => {
     await chat.say(greetingText, { typing: true });
-    await tools.showInitialDecision(chat);
+    await tools.sleep(async () => {
+        await tools.showInitialDecision(chat);
+    }, 2000)
+
 });
 
 // Response on greetings as "goodbye, bye, see you or thank you, thanks..."--> say goodbye back
