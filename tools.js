@@ -86,7 +86,7 @@ async function handleResult(conversation) {
  */
 async function goToBed(chat) {
     await sleep(async () => {
-        chat.conversation( async (conversation) => {
+        await chat.conversation( async (conversation) => {
             await conversation.say('Good night! :). See you soon...', { typing: true });
         });
     }, 2000 );
@@ -95,7 +95,7 @@ async function goToBed(chat) {
 // Helpers
 
 /**
- * Creates string filled with zeros .
+ * Creates string filled with zeros.
  * @param {number} number
  * @param {length} length
  * @returns {string}
