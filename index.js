@@ -42,7 +42,7 @@ bot.hear(['hello', 'hi', 'hey', 'good morning', 'good evening',], async (payload
     await chat.say(greetingText, { typing: true });
     await tools.sleep(async () => {
         await tools.showInitialDecision(chat);
-    }, 2000)
+    }, 3000)
 
 });
 

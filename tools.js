@@ -10,6 +10,7 @@ const MOVIE_API = 'http://www.omdbapi.com/?apikey=ebf2b73c';
 async function showInitialDecision(chat) {
     await chat.say({
         text: 'Would you like to watch a movie or a TV show tonight?',
+        typing: true,
         buttons: [
             { type: 'postback', title: 'Yes! Sure', payload: 'CHOOSE_MOVIES' },
             { type: 'postback', title: 'No', payload: 'SLEEP' }
