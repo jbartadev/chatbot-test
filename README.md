@@ -7,6 +7,9 @@ and you will have a great movie night without selecting movie for quite long tim
 
 Facebook messenger app based on `Node.js` and [BootBot](https://github.com/Charca/bootbot/blob/master/README.md) library.
 
+## How to run
+To run the development tunnel version: `node development.js` or to run the app `node index.js`.
+
 ## Features
 - Starts **conversation** with introduction message and initial buttons choice
 - Gets random `movi` or `TV show` from  [imdb](https://www.imdb.com/) and shows you basic information if react positively to initial decision
