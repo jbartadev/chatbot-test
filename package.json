@@ -1,7 +1,7 @@
 {
-  "name": "messenger",
+  "name": "movie-night-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "You do not know what movie or TV show you are watching tonight? Movie night bot will help you!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,12 +9,15 @@
     "startDev": "nodemon index.js",
     "startTunnel": "node tunnel.js"
   },
-  "author": "Noah Vaillancourt",
+  "author": "Jan Bárta",
   "license": "ISC",
+  "engines": {
+    "node": "^13.10.0"
+  },
   "dependencies": {
     "@apify/http-request": "^1.2.0",
     "bootbot": "^1.0.16",
-    "config": "2.0.1",
+    "config": "^2.0.1",
     "ngrok": "^3.2.7",
     "nodemon": "^1.18.10"
   }
